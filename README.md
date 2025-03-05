@@ -1,3 +1,8 @@
+-=(Tamagotchi_Senhor notes)=-
+
+Tested: Working Video 720p, 1080p & Sound.
+
+___
 # Tamagotchi P1 for FPGAs
 
 ![Promo Image](../assets/promo.jpg)
