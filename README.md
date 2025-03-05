@@ -2,6 +2,12 @@
 
 Tested: Working Video 720p, 1080p & Sound.
 
+Requirements:
+
+The Tamagotchi ROM can be commonly found in the MAME zip tama.zip , and will be named tama.b inside that zip.
+
+Rename tama.b to rom.bin and place it in games/Tamagotchi.
+
 ___
 # Tamagotchi P1 for FPGAs
 
