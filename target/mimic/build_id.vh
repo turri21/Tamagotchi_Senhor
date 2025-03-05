@@ -1,3 +1,3 @@
 // Build ID Verilog Module
-`define BUILD_DATE "20230427"
-`define BUILD_HASH "a36b0dad"
+`define BUILD_DATE "20250305"
+`define BUILD_HASH "FEEDC0DE"
