@@ -1,14 +1,7 @@
 sim/
 sim2/
-assets/*/*.hex
-bass/bass.exe
-bass/*.rom
-bass/tama.*
-bass/*.hex
 **/vunit_out
 **/__pycache__
-pkg/mimic/games/Tamagotchi/*.rom
-pkg/pocket/Assets/tamagotchi_p1/common/*.bin
 rtl/test/verilator/target
 node_modules
 
@@ -59,6 +52,3 @@ build_id.mif
 build_id.v
 c5_pin_model_dump.txt
 cr_ie_info.json
-# Gateman directories and files
-!.gateman/*
-!gateware.json

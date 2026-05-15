@@ -1,10 +1,24 @@
-# Tamagotchi P1 for FPGAs
+# Tamagotchi P1 for MiSTer
 
-![Promo Image](../assets/promo.jpg)
+This core is an original creation by [@agg23](https://github.com/agg23) over the course of 3 months. It is based strongly on the original documentation for the Tamagotchi CPU (see [Documentation Overview](docs/overview.md)), but also takes some learnings from [tamatool](https://github.com/jcrona/tamatool), and is inspired by [@Mazamars312](https://github.com/Mazamars312), [Andrew Wilson](https://github.com/AEW2015), and [Robert Piep](https://github.com/RobertPeip), who gave me helpful advice along the way. [The amazing backgrounds](https://github.com/bmarvo/tamagotchi-backgrounds) were recreated from source material by [@bmarvo](https://github.com/bmarvo). See [Licensing](#licensing) for more information.
 
-This core is an original creation by [@agg23](https://github.com/agg23) over the course of 3 months. It is based strongly on the original documentation for the Tamagotchi CPU (see [Documentation Overview](docs/overview.md)), but also takes some learnings from [tamatool](https://github.com/jcrona/tamatool), and is inspired by [@Mazamars312](https://github.com/Mazamars312), [Andrew Wilson](https://github.com/AEW2015), and [Robert Piep](https://github.com/RobertPeip), who gave me helpful advice along the way. [The amazing backgrounds](https://github.com/bmarvo/tamagotchi-backgrounds) were recreated from source material by [@bmarvo](https://github.com/bmarvo), and the Pocket platform icon was created by me. See [Licensing](#licensing) for more information.
+This split is focused on the MiSTer version of the core, assisted by Codex. The active project follows the MiSTer template layout: `sys/` is the untouched MiSTer framework, `rtl/` is the core RTL and MiSTer-local support code, `Tamagotchi.sv` is the framework glue, and `files.qip` is the manually maintained Quartus source list.
 
-Currently supported platforms are the Analogue Pocket and MiSTer.
+## Building for MiSTer
+
+Use Quartus 17.0.x, matching the upstream MiSTer template recommendation:
+
+```sh
+quartus_sh --flow compile Tamagotchi.qpf
+```
+
+Release RBFs should be placed in `releases/` with MiSTer naming:
+
+```text
+Tamagotchi_YYYYMMDD.rbf
+```
+
+Migration details and verification notes are documented in [docs/mister_migration.md](docs/mister_migration.md).
 
 ## Installation Instructions
 
@@ -18,13 +32,13 @@ If you've forgotten how to use the Tamagotchi in the nearly 30 years since it's 
 
 ### Savestates/Sleep + Wake
 
-Known as "Memories" on the Pocket and "savestates" elsewhere this core supports the creation and loading of savestates, and by extension, the core also supports the Pocket Sleep + Wake functionality. Tapping the power button while playing will suspend the game, ready to be resumed when powering the Pocket back on.
+This core supports creation and loading of MiSTer savestates.
 
 On MiSTer, you must remap your controls in order to bind one of the to the Savestate control. Once done, holding that button and D-pad left/right will allow you to choose your savestate slot, and holding that button in addition to start (if they are different) and D-pad up/down will allow you to load and create savestates in that slot.
 
 ### Automatic Restoration
 
-Tamagotchi will automatically restore where you left off, as a suppliment to the savestate functionality. Quitting the core on Pocket, or opening the OSD on MiSTer, will cause the core to take a savestate (separate from your 4 slots on MiSTer) that will be automatically restored on core launch.
+Tamagotchi will automatically restore where you left off, as a supplement to the savestate functionality. Opening the OSD on MiSTer will cause the core to take a savestate, separate from your 4 manual slots, that will be automatically restored on core launch.
 
 ### Turbo
 
@@ -44,7 +58,7 @@ This core supports custom backgrounds, and even ships with a Tamagotchi P2 backg
 
 ### Sound Settings
 
-- `Disable Sound`/`Sound` - Allows you to enable/disable the sound. For the Pocket's `Disable Sound` option, enabling the option (filling in the checkbox) will turn off the sound
+- `Sound` - Allows you to enable or disable the sound.
 
 ### Turbo Settings
 
@@ -73,9 +87,9 @@ I've tried to be thorough with my design decisions and provide/update various su
 
 There are a lot of components to this project, and the licensing on them depends on where they came from and potentially how they're used.
 
-| Contents                                                                                                                 | License |
-| ------------------------------------------------------------------------------------------------------------------------ | ------- |
-| The main repo, all Tamagotchi core code, all tools and tests, and the documentation (other than the docs owned by Epson) | MIT     |
-| All Pocket platform code, Pocket `core_top.sv`, and any Pocket specific components (unless otherwise noted)              | MIT     |
-| All MiMiC/MiSTer platform code, MiSTer `core_top.sv`, and any MiSTer specific components (unless otherwise noted)        | GPLv3   |
-| All "sprite" activity icons and backgrounds                                                                              | CC0     |
+| Contents                                                                                                                 | License                                  |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- |
+| The main repo, all Tamagotchi core code, all tools and tests, and the documentation (other than the docs owned by Epson) | MIT                                      |
+| MiSTer framework files in `sys/`                                                                                         | Upstream MiSTer template license/headers |
+| MiSTer glue in `Tamagotchi.sv` and `rtl/mister/`                                                                         | GPLv3                                    |
+| All "sprite" activity icons and backgrounds                                                                              | CC0                                      |

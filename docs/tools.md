@@ -2,7 +2,7 @@
 
 ## Microcode Assembler (micro_asm.js)
 
-Parses the `/rtl/core/rom/microcode.asm` file and produces a binary [microcode](microcode.md). Very simple and has very few features. `#102` starts instruction at position `102 * 4`, and these values (102) map to the instruction decoder. Jumps inside the microcode (which are rare) also use these functions.
+Parses the microcode assembly source and produces a binary [microcode](microcode.md). Very simple and has very few features. `#102` starts instruction at position `102 * 4`, and these values (102) map to the instruction decoder. Jumps inside the microcode (which are rare) also use these functions.
 
 ## ModelSim HEX Generator (modelsim.js)
 

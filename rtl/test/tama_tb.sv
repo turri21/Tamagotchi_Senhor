@@ -13,7 +13,7 @@ module tama_tb;
   // ROM is 16 bit
   reg [15:0] rom[8192];
 
-  initial $readmemh("C:/Users/adam/code/fpga/tamagotchi/bass/tama.hex", rom);
+  initial $readmemh("tama.hex", rom);
 
   reg [7:0] divider = 8'd50;
 

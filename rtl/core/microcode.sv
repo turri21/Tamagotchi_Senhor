@@ -58,9 +58,7 @@ module microcode (
 
   reg [15:0] rom[512];
 
-  // TODO: ModelSim only
-  // initial $readmemh("../../core/rom/microcode.hex", rom);
-  initial $readmemh("rom/microcode.hex", rom);
+  initial $readmemh("microcode.hex", rom);
 
   microcode_stage stage = STEP6_2;
 

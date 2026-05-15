@@ -1,25 +1,18 @@
 # Building
 
-Building the project is largely self-explanatory; just build as you normally would with Quartus. However, if you wish to change out assets, there are other steps you must take.
+Build the active MiSTer project from the repo root with Quartus:
+
+```bash
+quartus_sh --flow compile Tamagotchi.qpf
+```
+
+The generated microcode hex and UI font hex are already checked in as build inputs. Regenerate them only when changing the source assembly or font data.
 
 ## Building Microcode
 
 ```bash
 cd support
 npm run build
-```
-
-Alternatively you can directly run the microcode assembler
-
-```bash
-cd support
-node micro_asm.js ../rtl/core/rom/microcode.asm ../rtl/core/rom/microcode.rom
-```
-
-and convert it into hex for ingestion by the tools
-
-```bash
-node modelsim.js ../rtl/core/rom/microcode.rom ../rtl/core/rom/microcode.hex 4
 ```
 
 ## Verilator

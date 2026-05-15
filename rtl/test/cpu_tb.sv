@@ -10,7 +10,7 @@ module cpu_tb;
 
   reg [11:0] rom[8192];
 
-  initial $readmemh("C:/Users/adam/code/fpga/tamagotchi/bass/fib_optimized.hex", rom);
+  initial $readmemh("fib_optimized.hex", rom);
 
   cpu_6s46 cpu_uut (
       .clk(clk),

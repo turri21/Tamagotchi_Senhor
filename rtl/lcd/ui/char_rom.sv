@@ -7,7 +7,7 @@ module char_rom (
 );
   reg [7:0] rom[2 ** 10 - 1:0];
 
-  initial $readmemh("../assets/PixelOperatorMono.hex", rom);
+  initial $readmemh("PixelOperatorMono.hex", rom);
 
   // Data loading
   always @(posedge clk) begin

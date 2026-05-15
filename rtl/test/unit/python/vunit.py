@@ -1,12 +1,7 @@
-from os import environ
 from vunit.verilog import VUnit
 from itertools import product
 
 def run_vunit(test_glob):
-  # TODO: This will change based on who is running these tests
-  #$env:VUNIT_MODELSIM_PATH = 'C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/'
-  environ["VUNIT_MODELSIM_PATH"] = "C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/"
-
   vu = VUnit.from_argv()
 
   # Create library 'lib'

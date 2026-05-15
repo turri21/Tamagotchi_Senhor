@@ -1,0 +1,55 @@
+set_global_assignment -name QIP_FILE rtl/pll.qip
+set_global_assignment -name QIP_FILE rtl/ip/main_ram.qip
+set_global_assignment -name QIP_FILE rtl/ip/intel_video_ram.qip
+
+set_global_assignment -name SEARCH_PATH rtl/core
+set_global_assignment -name SEARCH_PATH rtl/lcd/ui
+
+set_global_assignment -name MISC_FILE rtl/core/microcode.hex
+set_global_assignment -name MISC_FILE rtl/lcd/ui/PixelOperatorMono.hex
+
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/types.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/savestates/ss_addresses.sv
+
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/alu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/cpu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/decode.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/microcode.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/reg_mux.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/core/regs.sv
+
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/buzzer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/clock.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/cpu_6s46.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/input_lines.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/interrupt.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/prog_timer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/stopwatch.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/timers.sv
+
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/lcd/alpha_blend.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/lcd/frame_ram.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/lcd/image_memory.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/lcd/lcd.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/lcd/rgb565_to_rgb888.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/lcd/sprites.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/lcd/video.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/lcd/video_gen.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/lcd/ui/char_rom.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/lcd/ui/ui.sv
+
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/savestates/bus_connector.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/savestates/bus_memory.sv
+
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/mister/clock_divider.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/mister/ddram.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/mister/savestate_controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/mister/savestate_ddr_controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/mister/savestate_fifo_controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/mister/savestate_machine.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/mister/savestate_save_fifo.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/mister/savestate_ui.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/mister/turbo_controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/mister/turbo_reset_controller.sv
+
+set_global_assignment -name SYSTEMVERILOG_FILE Tamagotchi.sv

@@ -17,9 +17,9 @@ module top (
   reg [15:0] rom[8192];
 
   initial begin
-    $readmemh("../../../bass/tama.hex", rom);
-    $readmemh("../../../assets/bin/spritesheet.hex", video.sprites.sprite_mem.memory);
-    $readmemh("../../../assets/bin/background.hex", video.background.memory);
+    $readmemh("tama.hex", rom);
+    $readmemh("spritesheet.hex", video.sprites.sprite_mem.memory);
+    $readmemh("background.hex", video.background.memory);
   end
 
   wire [12:0] rom_addr;

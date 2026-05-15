@@ -17,7 +17,7 @@ module cpu_core_tb;
 
   reg [11:0] rom[8192];
 
-  initial $readmemh("C:/Users/adam/code/fpga/tamagotchi/bass/fib_optimized.hex", rom);
+  initial $readmemh("fib_optimized.hex", rom);
 
   reg [3:0] ram[4096];
 
