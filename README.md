@@ -1,3 +1,8 @@
+-=(Tamagotchi_Senhor notes)=-
+
+Tested: Working Video 720p, 1080p & Sound.
+
+___
 # Tamagotchi P1 for MiSTer
 
 This core is an original creation by [@agg23](https://github.com/agg23) over the course of 3 months. It is based strongly on the original documentation for the Tamagotchi CPU (see [Documentation Overview](docs/overview.md)), but also takes some learnings from [tamatool](https://github.com/jcrona/tamatool), and is inspired by [@Mazamars312](https://github.com/Mazamars312), [Andrew Wilson](https://github.com/AEW2015), and [Robert Piep](https://github.com/RobertPeip), who gave me helpful advice along the way. [The amazing backgrounds](https://github.com/bmarvo/tamagotchi-backgrounds) were recreated from source material by [@bmarvo](https://github.com/bmarvo). See [Licensing](#licensing) for more information.
